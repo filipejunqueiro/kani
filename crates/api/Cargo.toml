@@ -9,6 +9,7 @@ rustfs-mimalloc.workspace = true
 tokio.workspace = true
 prost.workspace = true
 tonic.workspace = true
+dashmap.workspace = true
 
 [build-dependencies]
 tonic-prost-build.workspace = true
