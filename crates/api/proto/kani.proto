@@ -1,0 +1,26 @@
+syntax = "proto3";
+package kani;
+
+service KaniService {
+    rpc Get (BaseRequest) returns (BaseResponse);
+    rpc Set (ExtendedRequest) returns (ExtendedResponse);
+    rpc Del (BaseRequest) returns (BaseResponse);
+}
+
+message BaseRequest {
+    repeated string key = 1;
+}
+
+message ExtendedRequest {
+    optional string ttl = 1;
+    map<string, string> data = 2;
+}
+
+message BaseResponse {
+    uint32 status = 1;
+}
+
+message ExtendedResponse {
+    uint32 status = 1;
+    map<string, string> data = 2;
+}
