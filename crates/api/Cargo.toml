@@ -5,3 +5,10 @@ edition.workspace = true
 
 [dependencies]
 engine.workspace = true
+rustfs-mimalloc.workspace = true
+tokio.workspace = true
+prost.workspace = true
+tonic.workspace = true
+
+[build-dependencies]
+tonic-prost-build.workspace = true
